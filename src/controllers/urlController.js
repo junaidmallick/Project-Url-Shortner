@@ -71,7 +71,7 @@ const urlShortner = async (req, res) => {
             shortUrl: urlDetails.shortUrl
         }
         await SET_ASYNC(`${longUrl}`, JSON.stringify(result))
-        return res.status(200).send({ status: true, data: result })
+        return res.status(201).send({ status: true, data: result })
     }
     catch (error) {
         console.log(error)
